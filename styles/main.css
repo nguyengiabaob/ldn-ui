@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root
+{
+    --ldn-primary-color : #030303;
+    --ldn-white: #FFFF;
+    --ldn-contained: #1976D2;
+    --ldn-gray:#00000042;
+}
+
+
+* {
+    margin: auto;
+}

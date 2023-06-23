@@ -1,0 +1,1 @@
+{"version":3,"file":"ButtonProps.d.ts","sourceRoot":"","sources":["../../../../src/components/Button/ButtonProps.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,WAAW,GACvB;IACG,SAAS,CAAC,EAAE,MAAM,CAAA;IAClB,KAAK,CAAC,EAAE,KAAK,CAAC,aAAa,CAAA;IAC3B,OAAO,EAAE,KAAK,CAAC,iBAAiB,CAAA;CAClC,CAAA"}
