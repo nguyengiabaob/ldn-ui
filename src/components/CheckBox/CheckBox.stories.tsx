@@ -16,9 +16,5 @@ type Story = StoryObj<typeof CheckBox>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => (
-    <CheckBox
-      value={true}
-   />
-  ),
+  render: () => <CheckBox value={true} />,
 };
