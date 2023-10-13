@@ -19,11 +19,10 @@ type Story = StoryObj<typeof Slider>;
 export const Primary: Story = {
   render: () => (
     <Slider
-    // labelId="demo-simple-select-label"
-    // id="demo-simple-select"
-    // value={age}
-    // label="Age"
-    // onChange={handleChange}
-    ></Slider>
+      size="small"
+      defaultValue={70}
+      aria-label="Small"
+      valueLabelDisplay="auto"
+    />
   ),
 };

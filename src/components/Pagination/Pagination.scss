@@ -1,0 +1,143 @@
+@mixin color-btn($color) {
+  background-color: $color;
+}
+
+@mixin size-btn($color) {
+  @if $color == "small" {
+    padding: 3px 9px;
+  }
+  @if $color == "medium" {
+    padding: 6px 8px;
+  }
+  @if $color == "large" {
+    padding: 7px 21px;
+  }
+}
+
+@mixin disable-btn($variant) {
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+  @if $variant == "default" {
+    color: var(--ldn-gray);
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  @if $variant == "outlined" {
+    color: rgba(0, 0, 0, 0.26);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+
+.btn-small {
+  @include size-btn("small");
+}
+.btn-medium {
+  @include size-btn("medium");
+}
+.btn-large {
+  @include size-btn("large");
+}
+
+.ldn-btn {
+  min-width: 64px;
+  height: 32px;
+  border-radius: 4px;
+  border-width: 0.5px;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: 0.02857em;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  outline: 0px;
+  justify-content: center;
+  // background-color: #f4dea8;
+}
+
+//variant
+
+.ldn-btn-contained {
+  padding: 6px 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: var(--ldn-white);
+  background-color: var(--ldn-contained);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  &:hover {
+    text-decoration: none;
+    background-color: rgb(21, 101, 192);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+      rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  }
+  &-disable {
+    @include disable-btn("default");
+  }
+}
+
+.ldn-btn-outlined {
+  border: 1px solid rgba(25, 118, 210, 0.5);
+  padding: 5px 15px;
+  color: var(--ldn-contained);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(25, 118, 210, 0.04);
+    border: 1px solid rgb(25, 118, 210);
+  }
+  &-disable {
+    @include disable-btn("outlined");
+  }
+}
+
+.ldn-btn-text {
+  border: 0px;
+  padding: 6px 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: var(--ldn-contained);
+
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(25, 118, 210, 0.04);
+  }
+  &-disable {
+    @include disable-btn("default");
+  }
+}
+
+//color
+// .ldn-btn-error {
+//   @include color-btn("error");
+// }
+// .ldn-btn-error:hover {
+//   @include color-btn("error");
+// }
+
+// .ldn-btn-primary {
+//   @include color-btn("primary");
+// }
+
+// .ldn-btn-secondary {
+//   @include color-btn("secondary");
+// }
+// .ldn-btn-default {
+//   @include color-btn("default");
+// }
+
+// .ldn-btn {
+//   &.ldn-btn-primary:hover {
+//     @include color-btn("primary-hover");
+//   }
+//   &.ldn-btn-secondary:hover {
+//     @include color-btn("secondary-hover");
+//   }
+// }

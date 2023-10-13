@@ -2,7 +2,6 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import MenuItem from "./MenuItem";
-import Button from "../Button/Button";
 
 const meta: Meta<typeof MenuItem> = {
   title: "Components/MenuItem",

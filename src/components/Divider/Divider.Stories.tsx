@@ -1,15 +1,15 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import ToggleButtonGroup from "./Divider";
+import Divider from "./Divider";
 
-const meta: Meta<typeof ToggleButtonGroup> = {
-  title: "Components/ToggleButton",
-  component: ToggleButtonGroup,
+const meta: Meta<typeof Divider> = {
+  title: "Components/Divider",
+  component: Divider,
 };
 
 export default meta;
-type Story = StoryObj<typeof ToggleButtonGroup>;
+type Story = StoryObj<typeof Divider>;
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -17,5 +17,5 @@ type Story = StoryObj<typeof ToggleButtonGroup>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => <ToggleButtonGroup></ToggleButtonGroup>,
+  render: () => <Divider />,
 };

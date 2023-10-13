@@ -1,12 +1,10 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { FormControlLabel, Radio } from "@mui/material";
 import RadioGroup from "./RadioGroup";
-import MenuItem from "../MenuItem/MenuItem";
-import Button from "../Button/Button";
-
 const meta: Meta<typeof RadioGroup> = {
-  title: "Components/Select",
+  title: "Components/RadioGroup",
   component: RadioGroup,
 };
 
@@ -26,6 +24,10 @@ export const Primary: Story = {
     // value={age}
     // label="Age"
     // onChange={handleChange}
-    ></RadioGroup>
+    >
+      <FormControlLabel value="female" control={<Radio />} label="Female" />
+      <FormControlLabel value="male" control={<Radio />} label="Male" />
+      <FormControlLabel value="other" control={<Radio />} label="Other" />
+    </RadioGroup>
   ),
 };

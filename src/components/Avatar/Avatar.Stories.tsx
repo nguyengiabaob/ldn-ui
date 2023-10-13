@@ -17,5 +17,5 @@ type Story = StoryObj<typeof Avatar>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => <Avatar></Avatar>,
+  render: () => <Avatar title="fddfdsf"></Avatar>,
 };
